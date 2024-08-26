@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title> JS Cafe FastFood Order Menu</title>
+</head>
+
+<header> 
+    <h1>JS Menu Selector</h1>
+    <p>Select a drink, main and desert from our menu below.</p>
+</header>
+
+<body>
+
+<div class="drinksContainer alignFields">
+    <h3>Select your drink</h3>
+            <label for="drink">Choose your drink:</label>
+                <select id="drinkSelection" aria-label="Drink Selection">
+                    <option value="please select">Please Select</option>
+                    <option value="cola">Cola</option>
+                    <option value="lemon">Lemonade</option>
+                    <option value="orange">Orangeade</option>
+                </select>
+                <br>
+            <label for="size">Choose your size:</label>
+                <select id="drinkSize" aria-label="Drink Size">
+                    <option value="please select">Please Select</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <br>
+                <button onclick="placeDrinkOrder()">Add to Order</button> 
+</div>
+
+<div class ="mainCourseContainer alignFields">
+    <h3>Select your main</h3>
+            <label for="mainCourse">Select from our drop down list:</label>
+            <select id="mainCourseSelection" aria-label="Main Course Selection">
+                <option value="please select">Please Select</option>
+                <option value="burger">Beef Burger</option>
+                <option value="pizza">Cheese Pizza</option>
+                <option value="chicken">Chicken Nuggets</option>
+                <option value="pasta">Tomato Pasta</option>
+                <option value="fingers">Fish Fingers</option>
+            </select>
+            <br>
+        <label for="side1">Select your first side:</label>
+        <select id="side1Selection" aria-label="Side 1 Selection">
+            <option value="please select">Please Select</option>
+            <option value="fries">French Fries</option>
+            <option value="mash">Mash Potatoes</option> 
+            <option value="garlicBread">Garlic Bread</option>
+            <option value="chunkyChips">Chunky Chips</option>
+        </select>
+            <br>
+        <label for="side2">Select your second side:</label>
+        <select id="side2Selection" aria-label="Side 2 Selection">
+            <option value="please select">Please Select</option>
+            <option value="salad">Salad</option>
+            <option value="peas">Peas</option>
+            <option value="beans">Baked Beans</option>
+            <option value="garlicBread">Garlic Bread</option>
+            <option value="corn">Corn on the Cob</option>
+        </select>
+            <br>
+            <button onclick="placeMainCourseOrder()">Add to Order</button>       
+</div>
+
+<div class="dessertContainer alignFields">
+    <h3>Select your dessert</h3>
+    <label for="dessert">Select from our drop down list:</label>
+    <select id="dessertSelection" aria-label="Dessert Selection">
+        <option value="please select">Please Select</option>
+        <option value="iceCream">Ice Cream</option>
+        <option value="ChocolateCake">Chocolate Cake</option>
+        <option value="cheesecake">Cheese Cake</option>
+        <option value="cookie">Cookie</option>
+    </select> 
+        <br>
+    <label for="dessertSide">Dessert Side</label>
+    <select id="dessertSideSelection" aria-label="Dessert Side Selection">
+        <option value="please select">Please Select</option>  
+        <option value="custard">Custard</option>
+        <option value="cream">Cream</option>
+        <option value="syrup">Syrup</option>
+    </select>
+    <br>
+    <button onclick="placeDessertOrder()">Add to Order</button>
+</div>
+
+<div class="orderSummary alignFields">
+    <h3>Your Order Summary</h3>
+    <h4>Drink:</h4>
+        <p id="orderResult"></p>
+    <h4>Main Course:</h4>
+        <p id="orderResult2"></p>
+    <h4>Dessert:</h4>
+    <p id="orderResult3"></p>
+    <button id="saveButton">Save Order</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
